@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2020/05/30/09/53/todo-lists-5238324_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#header {
+    justify-content: center;
+    align-items: center;
+    /* background-color: gray; */
+    font-size: 5rem;
+    border-radius: 25px;
+    color: rgb(71, 61, 61);
+}
+
+#button {
+    width: 120px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0px 0px 4px 40px;
+    font-size: 20px;
+    background-color: rgb(252, 252, 252);
+    cursor: pointer;
+    width: 44vw;
+}
+
+li :hover {
+    background-color: rgb(158, 144, 144);
+}
+
+.delete-btn {
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.delete-btn:hover {
+    background-color: red;
+    color: white;
+}
