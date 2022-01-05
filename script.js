@@ -1,24 +1,49 @@
 const addBtn = document.querySelector("#button");
-const input = document.querySelector("#input");
+const inputText = document.querySelector("#input");
 const ul = document.querySelector("ul")
 
 const addListElement = () => {
-    const val = input.value
+    const val = inputText.value
 
     if (val.trim() !== "") {
+
+        // const newList = document.createElement("li")
+        // const newInputText = document.createElement("span")
+        // const checkBtn = document.createElement("i")
+        // const delBtn = document.createElement("i")
+        // const favBtn = document.createElement("i")
+
+
+        // checkBtn.setAttribute("class", "far fa-check-circle")
+        // newInputText.setAttribute("class", "span")
+        // delBtn.setAttribute("class", "fas fa-trash")
+        // delBtn.setAttribute("style", "float:right")
+        // favBtn.setAttribute("class", "far fa-star")
+        // favBtn.setAttribute("style", "float:right")
+
+        // newList.appendChild(newInputText)
+        // newList.appendChild(checkBtn)
+        // newList.appendChild(delBtn)
+        // newList.appendChild(favBtn)
+        // ul.appendChild(newList)
+
+        // newInputText.innerText = val
+
+        // console.log(ul);
+
         const listEl = document.createElement("li")
             // listEl.innerText = input.value
-        const content = document.createElement("span")
+        const newInputText = document.createElement("span")
 
-        content.setAttribute("class", "list-element")
-        content.textContent = val
+        newInputText.setAttribute("class", "list-element")
+        newInputText.textContent = val
 
 
-        const delBtn = document.createElement("span")
+        const delBtn = document.createElement("i")
         delBtn.setAttribute("class", "delete-btn")
         delBtn.innerText = "\u00D7"
 
-        listEl.appendChild(content)
+        listEl.appendChild(newInputText)
         listEl.appendChild(delBtn)
         ul.appendChild(listEl)
 
@@ -36,13 +61,19 @@ const addListElement = () => {
         alert("Please enter a value")
     }
 
-    input.value = ""
+    inputText.value = ""
 }
 
 addBtn.addEventListener("click", addListElement)
 input.addEventListener("keyup", function(e) {
     if (e.keyCode === 13) {
         addListElement()
-        input.value = ""
+        inputText.value = ""
     }
 })
+const list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+    }
+}, false);
