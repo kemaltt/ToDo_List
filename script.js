@@ -39,9 +39,13 @@ const addListElement = () => {
         newInputText.textContent = val
 
 
-        const delBtn = document.createElement("i")
-        delBtn.setAttribute("class", "delete-btn")
-        delBtn.innerText = "\u00D7"
+        const delBtn = document.createElement("span")
+        delBtn.setAttribute("class", "delete-btn fa fa-trash-o ")
+        delBtn.setAttribute("style", "font-size:26px")
+            // delBtn.innerHTML = '&#xf014;'
+
+
+        // console.log(delBtn);
 
         listEl.appendChild(newInputText)
         listEl.appendChild(delBtn)
@@ -50,8 +54,9 @@ const addListElement = () => {
         const deleteBtn = document.querySelectorAll(".delete-btn")
         Array.from(deleteBtn).forEach(function(btn) {
             btn.addEventListener("click", function(e) {
-                console.log(e)
+                // console.log(e)
                 const li = e.target.parentElement
+                console.log(li);
                 li.remove()
             })
         })
