@@ -46,6 +46,7 @@ li {
     height: 50px;
     margin-top: 6px;
     border-radius: 20px;
+    box-shadow: 10px 5px 20px black;
 }
 
 li:nth-child(even) {
@@ -54,6 +55,7 @@ li:nth-child(even) {
 
 li:hover {
     background-color: rgb(206, 206, 206);
+    box-shadow: 5px 5px 30px black;
 }
 
 li.checked {
