@@ -46,15 +46,16 @@ const addListElement = () => {
 
         const checkedBtn = document.querySelectorAll(".check-btn")
         Array.from(checkedBtn).forEach(function(chkBtn) {
-            chkBtn.addEventListener("click", function(e) {
+            chkBtn.addEventListener("click", function() {
 
-                ul2.appendChild(listEl) +=
-                    // inputText.value = ""
 
-                    console.log(ul2);
 
-                const li = e.target.parentElement
-                console.log(li);
+                ul2.appendChild(listEl)
+
+
+                console.log(ul2);
+
+
 
             })
         })
