@@ -17,12 +17,19 @@ body {
     align-items: center;
     /* background-color: gray; */
     font-size: 5rem;
-    border-radius: 25px;
     color: rgb(71, 61, 61);
+    /* color: #fff; */
+    border: solid 1px black;
+    border-radius: 25px;
+    box-shadow: 5px 5px 30px black;
+    font-family: 'Amatic SC', cursive;
 }
 
+.input {}
+
 #button {
-    width: 120px;
+    width: 60px;
+    height: 46px;
 }
 
 ul {
@@ -35,6 +42,7 @@ ul {
 li {
     display: flex;
     justify-content: space-between;
+    /* justify-content: space-evenly; */
     align-items: center;
     list-style: none;
     padding: 0px 0px 4px 40px;
@@ -42,10 +50,10 @@ li {
     background-color: white;
     /* background-color: rgb(206, 206, 206); */
     cursor: pointer;
-    width: 75%;
-    height: 50px;
+    width: 100%;
+    height: 40px;
     margin-top: 6px;
-    border-radius: 20px;
+    border-radius: 20px 3px 3px 20px;
     box-shadow: 10px 5px 20px black;
 }
 
@@ -56,6 +64,41 @@ li:nth-child(even) {
 li:hover {
     background-color: rgb(206, 206, 206);
     box-shadow: 5px 5px 30px black;
+}
+
+.box {
+    font-size: 25px !important;
+    /* background-color: #fff; */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 20px black;
+}
+
+.body {
+    padding: 10px;
+    height: 40% !important;
+}
+
+.head-to-do {
+    background-color: #f57c00;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.head-completed {
+    background-color: #43a047;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+h3 {
+    color: #fff;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
 }
 
 li.checked {
@@ -80,12 +123,20 @@ li.checked {
 
 .delete-btn {
     padding: 6px 16px;
-    height: 50px;
+    height: 40px;
     margin-top: 4px;
 }
 
-.delete-btn:hover {
+.check-btn {
+    padding: 6px 16px;
+    height: 40px;
+    margin-top: 4px;
+    margin-left: auto;
+}
+
+
+/* .delete-btn:hover {
     background-color: red;
     color: white;
     border-radius: 0px 20px 20px 0px;
-}
+} */

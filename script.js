@@ -1,35 +1,14 @@
 const addBtn = document.querySelector("#button");
 const inputText = document.querySelector("#input");
-const ul = document.querySelector("ul")
+const ul = document.querySelector(".list-ul")
+const ul2 = document.querySelector(".list-ul2")
+
 
 const addListElement = () => {
     const val = inputText.value
 
     if (val.trim() !== "") {
 
-        // const newList = document.createElement("li")
-        // const newInputText = document.createElement("span")
-        // const checkBtn = document.createElement("i")
-        // const delBtn = document.createElement("i")
-        // const favBtn = document.createElement("i")
-
-
-        // checkBtn.setAttribute("class", "far fa-check-circle")
-        // newInputText.setAttribute("class", "span")
-        // delBtn.setAttribute("class", "fas fa-trash")
-        // delBtn.setAttribute("style", "float:right")
-        // favBtn.setAttribute("class", "far fa-star")
-        // favBtn.setAttribute("style", "float:right")
-
-        // newList.appendChild(newInputText)
-        // newList.appendChild(checkBtn)
-        // newList.appendChild(delBtn)
-        // newList.appendChild(favBtn)
-        // ul.appendChild(newList)
-
-        // newInputText.innerText = val
-
-        // console.log(ul);
 
         const listEl = document.createElement("li")
             // listEl.innerText = input.value
@@ -39,27 +18,48 @@ const addListElement = () => {
         newInputText.textContent = val
 
 
-        const delBtn = document.createElement("span")
-        delBtn.setAttribute("class", "delete-btn fa fa-trash-o ")
-        delBtn.setAttribute("style", "font-size:26px")
-            // delBtn.innerHTML = '&#xf014;'
 
+        const checkBtn = document.createElement("i")
+        checkBtn.setAttribute("class", "check-btn btn btn-outline-primary fas fa-check-square ")
+        const delBtn = document.createElement("i")
+        delBtn.setAttribute("class", "delete-btn btn btn-outline-danger fas fa-trash-alt ")
+        delBtn.setAttribute("style", "font-size:18px")
 
-        // console.log(delBtn);
 
         listEl.appendChild(newInputText)
+        listEl.appendChild(checkBtn)
         listEl.appendChild(delBtn)
+
         ul.appendChild(listEl)
 
+        console.log(listEl);
+
         const deleteBtn = document.querySelectorAll(".delete-btn")
-        Array.from(deleteBtn).forEach(function(btn) {
-            btn.addEventListener("click", function(e) {
+        Array.from(deleteBtn).forEach(function(delBtn) {
+            delBtn.addEventListener("click", function(e) {
                 // console.log(e)
                 const li = e.target.parentElement
-                console.log(li);
+                    // console.log(li);
                 li.remove()
             })
         })
+
+        const checkedBtn = document.querySelectorAll(".check-btn")
+        Array.from(checkedBtn).forEach(function(chkBtn) {
+            chkBtn.addEventListener("click", function(e) {
+
+                ul2.appendChild(listEl) +=
+                    // inputText.value = ""
+
+                    console.log(ul2);
+
+                const li = e.target.parentElement
+                console.log(li);
+
+            })
+        })
+
+
 
     } else {
 
