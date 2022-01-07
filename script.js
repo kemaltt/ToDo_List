@@ -46,12 +46,12 @@ const addListElement = () => {
 
         const checkedBtn = document.querySelectorAll(".check-btn");
         Array.from(checkedBtn).forEach(function(chkBtn) {
-            chkBtn.addEventListener("click", function() {
+            chkBtn.addEventListener("click", function(e) {
+                const ull = e.target.parentElement;
+                console.log(ull);
+                ul2.appendChild(ull);
 
-
-                ul2.appendChild(listEl)
-
-                console.log(ul2);
+                //  console.log(ul2);
             });
         });
     } else {
@@ -62,6 +62,7 @@ const addListElement = () => {
 };
 
 addBtn.addEventListener("click", addListElement);
+
 input.addEventListener("keyup", function(e) {
     if (e.keyCode === 13) {
         addListElement();
