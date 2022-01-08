@@ -48,10 +48,19 @@ const addListElement = () => {
         Array.from(checkedBtn).forEach(function(chkBtn) {
             chkBtn.addEventListener("click", function(e) {
                 const ull = e.target.parentElement;
-                console.log(ull);
-                ul2.appendChild(ull);
 
-                //  console.log(ul2);
+                console.log(ull);
+
+                ul2.appendChild(ull);
+            });
+        });
+
+        const returnBtn = document.querySelectorAll(".check-btn");
+        Array.from(returnBtn).forEach(function(chkBtn2) {
+            chkBtn2.addEventListener("dblclick", function(e) {
+                const ul3 = e.target.parentElement;
+
+                ul.appendChild(ul3);
             });
         });
     } else {
